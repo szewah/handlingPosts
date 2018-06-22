@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 // tell express that www is the root of our pubilc web folder
 app.use(express.static(path.join(__dirname, 'www')));
 // tell express what to do when the /form ruote is requested
+
 app.post('/form', function(req,res){
 // http://www.java2s.com/Tutorials/Javascript/Node.js_Tutorial/1810__Node.js_HTTP_Headers.htm
 	res.setHeader('Content-Type', 'application/json');
@@ -26,9 +27,4 @@ app.post('/form', function(req,res){
 app.listen(port, function(){
 	console.log('Server is running. Point your browser to http://localhost:3000')
 });
-
-
-
-
-
 
